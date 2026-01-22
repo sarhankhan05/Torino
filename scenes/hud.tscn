@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://8ispcgdeb33k"]
+[gd_scene load_steps=7 format=3 uid="uid://8ispcgdeb33k"]
 
 [ext_resource type="Script" uid="uid://cdb81uyjcvkta" path="res://scripts/hud.gd" id="1_oo0fn"]
 [ext_resource type="Texture2D" uid="uid://cjieadttrisv3" path="res://assets/egg(1).png" id="2_oo0fn"]
 [ext_resource type="Texture2D" uid="uid://d1cr7t5hkgdw8" path="res://assets/Pause.png" id="3_5ysmq"]
 [ext_resource type="Texture2D" uid="uid://d3phhawb41a7r" path="res://assets/Plume 16x16.png" id="3_6fi6k"]
-[ext_resource type="FontFile" uid="uid://uo8yppjo1jc2" path="res://assets/BoldPixels.ttf" id="4_uo2fv"]
+[ext_resource type="FontFile" uid="uid://c5lpwnt5kpk78" path="res://assets/BoldPixels.otf" id="4_uo2fv"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_uo2fv"]
 
 [node name="HUD" type="CanvasLayer"]
 process_mode = 3
@@ -33,7 +35,6 @@ stretch_mode = 5
 
 [node name="FeatherLabel" type="Label" parent="FeatherContainer" groups=["feather"]]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_uo2fv")
 theme_override_font_sizes/font_size = 16
 text = "X 0"
@@ -49,6 +50,7 @@ offset_right = -19.0
 offset_bottom = 63.0
 grow_horizontal = 0
 focus_mode = 0
+button_group = SubResource("ButtonGroup_uo2fv")
 texture_normal = ExtResource("3_5ysmq")
 stretch_mode = 0
 
