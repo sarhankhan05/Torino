@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://co2nm4nm6800f"]
+
+[ext_resource type="Script" uid="uid://cfcivec5erb15" path="res://addons/image/tool/ToolPngMerge.cs" id="1_8ka1k"]
+
+[node name="ToolPngMerge" type="Node2D"]
+script = ExtResource("1_8ka1k")
+MaxWidth = 870
+MaxHeight = 1535

@@ -40,7 +40,7 @@ func _on_host_button_pressed():
 	if player_name == "":
 		player_name = "Player"
 
-	NetworkManager.host_game()
+	#NetworkManager.host_game()
 
 	get_tree().change_scene_to_file("res://scenes/level_1.tscn")
 
@@ -50,6 +50,6 @@ func _on_join_button_pressed():
 	if ip == "":
 		ip = "127.0.0.1"
 
-	NetworkManager.join_game(ip)
+	#NetworkManager.join_game(ip) d d
 
 	get_tree().change_scene_to_file("res://scenes/level_1.tscn")

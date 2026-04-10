@@ -1,0 +1,66 @@
+[gd_scene load_steps=3 format=3 uid="uid://ca8fq0geivlts"]
+
+[ext_resource type="Texture2D" uid="uid://4vxhc78asmqm" path="res://assets/PixelTreeSet/Trees_Outlined.png" id="1_ysiov"]
+[ext_resource type="Texture2D" uid="uid://bok45bbub12p0" path="res://assets/PixelTreeSet/Trees_Alt.png" id="2_hldw5"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-94, -11)
+texture = ExtResource("1_ysiov")
+region_enabled = true
+region_rect = Rect2(0, 28.5, 77, 115)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(35, -21)
+texture = ExtResource("1_ysiov")
+region_enabled = true
+region_rect = Rect2(90, 18.5, 93, 114)
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(174, -15)
+texture = ExtResource("1_ysiov")
+region_enabled = true
+region_rect = Rect2(181.27148, 5.2856293, 94.380035, 139.08638)
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(99, 51)
+texture = ExtResource("1_ysiov")
+region_enabled = true
+region_rect = Rect2(274.91553, -10.631965, 85.06622, 149.02112)
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(-22, 85)
+texture = ExtResource("1_ysiov")
+region_enabled = true
+region_rect = Rect2(358.11902, 15.098146, 86.308044, 126.04703)
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(47, 132)
+texture = ExtResource("1_ysiov")
+region_enabled = true
+region_rect = Rect2(-0.15263367, 147.08206, 68.301346, 84.44531)
+
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+position = Vector2(-154, 82)
+texture = ExtResource("1_ysiov")
+region_enabled = true
+region_rect = Rect2(84.83694, 127.251045, 97.48466, 100.58926)
+
+[node name="Sprite2D8" type="Sprite2D" parent="."]
+position = Vector2(-93, 175)
+texture = ExtResource("1_ysiov")
+region_enabled = true
+region_rect = Rect2(314.99747, 175.78543, 44.289673, 18.48059)
+
+[node name="Sprite2D9" type="Sprite2D" parent="."]
+position = Vector2(-224, -29)
+texture = ExtResource("2_hldw5")
+region_enabled = true
+region_rect = Rect2(-3.7840633, 28.529758, 86.929, 106.17757)
+
+[node name="Sprite2D10" type="Sprite2D" parent="."]
+position = Vector2(-102, -137)
+texture = ExtResource("2_hldw5")
+region_enabled = true
+region_rect = Rect2(284.85028, -16.841206, 78.236084, 149.02113)
