@@ -38,6 +38,10 @@ var feather_count := 0
 func _ready() -> void:
 
 	print("LEVEL 1 READY!!!")
+	# deleting file for testing
+	if FileAccess.file_exists("user://save.dat"):
+		DirAccess.remove_absolute("user://save.dat")
+		print("🗑 Save file deleted")
 
 	await get_tree().process_frame
 

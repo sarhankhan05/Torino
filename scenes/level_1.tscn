@@ -23,7 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://csupwa0mnp7il" path="res://scenes/shooting_plant.tscn" id="21_so66j"]
 [ext_resource type="PackedScene" uid="uid://buvvply1yc4as" path="res://scenes/circle_trap.tscn" id="22_tr1x6"]
 [ext_resource type="Texture2D" uid="uid://4vxhc78asmqm" path="res://assets/PixelTreeSet/Trees_Outlined.png" id="23_d5akn"]
-[ext_resource type="PackedScene" path="res://scenes/nest_end.tscn" id="24_wbtxt"]
+[ext_resource type="PackedScene" uid="uid://ddkhvgtvltfo" path="res://scenes/nest_end.tscn" id="24_wbtxt"]
 [ext_resource type="Script" uid="uid://d1fw3yip8086" path="res://scripts/nest_end.gd" id="25_x2fux"]
 
 [sub_resource type="GDScript" id="GDScript_1s4pk"]
@@ -2434,10 +2434,6 @@ rotation = 3.1073444
 
 [node name="Spike2" parent="Spike3/Spike2/Spike2/Spike2/Spike2/Spike3" unique_id=682739541 instance=ExtResource("13_7gny6")]
 position = Vector2(-6031.8647, 4828.2905)
-rotation = 3.1073444
-
-[node name="Spike4" parent="Spike3/Spike2/Spike2/Spike2/Spike2" unique_id=273385945 instance=ExtResource("13_7gny6")]
-position = Vector2(2673.9998, -2690)
 rotation = 3.1073444
 
 [node name="Spike5" parent="Spike3/Spike2/Spike2/Spike2/Spike2" unique_id=111887400 instance=ExtResource("13_7gny6")]
