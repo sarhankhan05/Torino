@@ -23,6 +23,8 @@
 [ext_resource type="PackedScene" uid="uid://csupwa0mnp7il" path="res://scenes/shooting_plant.tscn" id="21_so66j"]
 [ext_resource type="PackedScene" uid="uid://buvvply1yc4as" path="res://scenes/circle_trap.tscn" id="22_tr1x6"]
 [ext_resource type="Texture2D" uid="uid://4vxhc78asmqm" path="res://assets/PixelTreeSet/Trees_Outlined.png" id="23_d5akn"]
+[ext_resource type="PackedScene" path="res://scenes/nest_end.tscn" id="24_wbtxt"]
+[ext_resource type="Script" uid="uid://d1fw3yip8086" path="res://scripts/nest_end.gd" id="25_x2fux"]
 
 [sub_resource type="GDScript" id="GDScript_1s4pk"]
 script/source = "extends Node2D
@@ -822,7 +824,7 @@ script = SubResource("GDScript_1s4pk")
 
 [node name="Player" parent="." unique_id=1470417065 instance=ExtResource("1_014kd")]
 z_index = 3
-position = Vector2(2297, -2817)
+position = Vector2(-192, 111)
 
 [node name="RoomDetector" type="Area2D" parent="Player" unique_id=907355171]
 collision_layer = 128
@@ -2652,6 +2654,12 @@ position = Vector2(170, 30)
 rotation = -1.5893283
 scale = Vector2(1.5, 1.5)
 
+[node name="Nest" parent="." unique_id=748922004 instance=ExtResource("24_wbtxt")]
+position = Vector2(2849, -3005)
+script = ExtResource("25_x2fux")
+main_menu_scene = "res://scenes/Main_Menu.tscn"
+
 [connection signal="room_changed" from="Player" to="Camera2D" method="set_room"]
 [connection signal="area_entered" from="Player/RoomDetector" to="Player" method="_on_RoomDetector_area_entered"]
 [connection signal="area_entered" from="Player/RoomDetector" to="Player" method="_on_room_detector_area_entered"]
+[connection signal="body_entered" from="Nest" to="Nest" method="_on_body_entered"]
