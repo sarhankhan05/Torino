@@ -1,6 +1,6 @@
 [gd_scene load_steps=31 format=3 uid="uid://obyf1hxokbvj"]
 
-[ext_resource type="Script" uid="uid://b2vh448fun4qw" path="res://scripts/main_menu.gd" id="1_0bfng"]
+[ext_resource type="Script" uid="uid://dc45dl5yv21xl" path="res://scripts/main_menu.gd" id="1_0bfng"]
 [ext_resource type="Texture2D" uid="uid://cor72fxwuxj7v" path="res://assets/Pixel Art Bird 16x16/BirdSprite.png" id="2_0bfng"]
 [ext_resource type="VideoStream" uid="uid://cu0wos3v55tg" path="res://assets/Game_Background_Animated_Video_Generation.ogv" id="2_yb5uv"]
 [ext_resource type="Shader" uid="uid://bbtcqsbn4a16f" path="res://scenes/Main_Menu.gdshader" id="3_ytedg"]
@@ -212,18 +212,28 @@ color = Color(1, 1, 1, 0)
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
 offset_left = 496.0
-offset_top = 471.0
+offset_top = 431.0
 offset_right = 656.0
-offset_bottom = 518.0
+offset_bottom = 478.0
 theme_override_font_sizes/font_size = 27
-text = "Start Game"
+text = "Solo Flight"
+
+[node name="PlayFriendsButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 490.0
+offset_right = 656.0
+offset_bottom = 572.0
+theme_override_font_sizes/font_size = 27
+text = "Play with 
+Friends"
 
 [node name="Button2" type="Button" parent="."]
 layout_mode = 0
-offset_left = 526.0
-offset_top = 533.0
-offset_right = 626.0
-offset_bottom = 578.0
+offset_left = 529.0
+offset_top = 586.0
+offset_right = 629.0
+offset_bottom = 631.0
 theme_override_font_sizes/font_size = 27
 text = "Setting"
 
@@ -247,5 +257,40 @@ sprite_frames = SubResource("SpriteFrames_h8c6n")
 animation = &"Idle"
 autoplay = "Idle"
 
+[node name="MultiplayerPanel" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LineEdit" type="LineEdit" parent="MultiplayerPanel"]
+layout_mode = 0
+offset_left = 482.0
+offset_top = 388.0
+offset_right = 667.0
+offset_bottom = 433.0
+theme_override_font_sizes/font_size = 27
+placeholder_text = "Username"
+alignment = 1
+
+[node name="HostButton" type="Button" parent="MultiplayerPanel"]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 462.0
+offset_right = 656.0
+offset_bottom = 509.0
+theme_override_font_sizes/font_size = 27
+text = "Host Game"
+
+[node name="JoinButton" type="Button" parent="MultiplayerPanel"]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 531.0
+offset_right = 656.0
+offset_bottom = 578.0
+theme_override_font_sizes/font_size = 27
+text = "Join Game"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="PlayFriendsButton" to="." method="_on_play_friends_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

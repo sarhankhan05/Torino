@@ -1,16 +1,35 @@
 extends Node
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta: float) -> void:
-	#pass
+
+func _on_button_pressed() -> void:
+
+	# If a save file exists
+	if FileAccess.file_exists("user://save.dat"):
+
+		var file = FileAccess.open("user://save.dat", FileAccess.READ)
+		var save_data = file.get_var()
+
+		var level_path = save_data["level"]
+
+		print("Loading saved level:", level_path)
+
+		get_tree().change_scene_to_file(level_path)
+
+	else:
+
+		print("No save found, starting new game")
+
+		get_tree().change_scene_to_file("res://scenes/level_1.tscn")
 
 
 func _on_button_2_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/Setting.tscn")
 	
+func _on_play_friends_button_pressed() -> void:
 
-func _on_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/level_1.tscn")
+	# Hide main menu buttons
+	$Button.visible = false
+	$PlayFriendsButton.visible = false
+
+	# Show multiplayer options
+	$MultiplayerPanel.visible = true
